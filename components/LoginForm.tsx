@@ -8,7 +8,7 @@ export default function LoginForm() {
     e.preventDefault();
   };
   return (
-    <form onSubmit={submit} className="border-rotate rounded-xl min-w-[400px] max-sm:min-w-full aspect-[4/5]">
+    <form onSubmit={submit} className="border-rotate rounded-xl min-w-[400px] max-sm:min-w-[90%] aspect-[4/5]">
       <div className="relative bg-background shadow-md rounded-xl h-full p-5">
         <h1 className="text-center mb-10 text-2xl font-bold">Welcome Back</h1>
         <div className="relative w-full mt-10 input-container">
