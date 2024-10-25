@@ -4,6 +4,7 @@ import {useState} from "react";
 import NavBtn from "./NavBtn";
 import NavLinks from "./navLinks";
 import {buttonVariants} from "./ui/button";
+import Logo from "./Logo";
 
 export default function Header() {
   const [navState, setNavState] = useState(false);
@@ -13,7 +14,7 @@ export default function Header() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="backdrop-blur w-full flex justify-between py-4">
-            <div>Adel</div>
+            <Logo />
             <button
               className="sm:hidden space-y-1.5 p-2 transition-all duration-300 hover:bg-background-alt rounded-full aspect-square flex flex-col justify-cente outline-none border-none focu"
               onClick={() => {
@@ -31,12 +32,12 @@ export default function Header() {
             <NavLinks setNavState={setNavState} />
             <div className="flex items-center gap-2 max-sm:flex-col max-sm:gap-5 max-sm: max-sm:w-full">
               <Link
-                href="#"
+                href="/login"
                 className={`${buttonVariants({variant: "secondary"})} max-sm:w-full max-sm:block max-sm:text-center`}
               >
                 Login
               </Link>
-              <Link href="#" className={`${buttonVariants()} max-sm:w-full max-sm:block max-sm:text-center`}>
+              <Link href="/signup" className={`${buttonVariants()} max-sm:w-full max-sm:block max-sm:text-center`}>
                 Sign up
               </Link>
             </div>

@@ -1,12 +1,13 @@
 import {navLinks} from "@/lib/consts";
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="py-10">
       <div className="space-y-4 text-center">
         <div className="logo">
-          <Link href="/">Logo</Link>
+          <Logo />
         </div>
         <ul className="flex justify-center items-center gap-5 flex-wrap">
           {navLinks.map((item, i) => (

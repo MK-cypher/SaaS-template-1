@@ -328,11 +328,11 @@ html {
   inherits: false;
 }
 
-.pricing-card {
+.border-rotate {
   position: relative;
 }
 
-.pricing-card:nth-child(2)::before {
+.border-rotate::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -351,3 +351,29 @@ html {
 }
 
 /* End Pricing */
+
+/* Start forms */
+
+.input-container .input:focus ~ label,
+.input-container .input:valid ~ label {
+  color: hsl(var(--primary));
+  transform: translate(-10px, -40px);
+  font-size: 0.9rem;
+}
+
+.input-container .input:focus ~ i,
+.input-container .input:valid ~ i {
+  height: calc(100% - 5px);
+}
+
+form .input-container textarea.input {
+  height: 200px;
+  resize: none;
+}
+
+.input-container textarea.input:focus,
+.input-container textarea.input:valid {
+  color: white;
+}
+
+/* End forms */
