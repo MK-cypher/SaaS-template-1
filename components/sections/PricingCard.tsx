@@ -48,7 +48,7 @@ export default function PricingCard({item, type, i}: props) {
     };
   }, [type]);
   return (
-    <div className={`${i == 1 && "border-rotate"} rounded-xl md:min-w-[230px] max-sm:w-full`}>
+    <div className={`${i == 1 && "border-rotate"} rounded-xl w-[300px] max-sm:w-full`}>
       <div className="gradient-2 relative p-8 rounded-xl flex flex-col justify-center items-center">
         <div className="text-sm mb-2">{item.type}</div>
         <div className="flex items-end mb-2">
