@@ -10,8 +10,8 @@ export default function Faq() {
         </div>
       </div>
       <div className="text-3xl font-semibold text-center mt-3 mb-10">Have any Questions?</div>
-      <div className="container flex gap-5 max-lg:flex-col">
-        <div className="sm:w-1/2">
+      <div className="container flex gap-5 max-md:flex-col">
+        <div className="md:w-1/2 w-full">
           <Accordion type="multiple" className="text-start flex flex-col gap-3 max-lg:text-center border-none">
             {faqs.slice(0, faqs.length / 2).map((item, i) => (
               <AccordionItem
@@ -25,12 +25,12 @@ export default function Faq() {
                     <div>{item.title}</div>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="rounded-b-xl p-2">{item.description}</AccordionContent>
+                <AccordionContent className="rounded-b-xl p-2 text-start">{item.description}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
-        <div className="sm:w-1/2">
+        <div className="md:w-1/2 w-full">
           <Accordion type="multiple" className="text-start flex flex-col gap-3 max-lg:text-center border-none">
             {faqs.slice(faqs.length / 2, faqs.length).map((item, i) => (
               <AccordionItem
@@ -44,7 +44,7 @@ export default function Faq() {
                     <div>{item.title}</div>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="rounded-b-xl p-2">{item.description}</AccordionContent>
+                <AccordionContent className="rounded-b-xl p-2 text-start">{item.description}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

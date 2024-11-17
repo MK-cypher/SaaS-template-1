@@ -10,7 +10,7 @@ export default function Header() {
   const [navState, setNavState] = useState(false);
 
   return (
-    <div className="w-full mx-auto  fixed z-10 sm:backdrop-blur">
+    <div className="w-full mx-auto top-0 px-2 fixed z-10 sm:backdrop-blur">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <div className="backdrop-blur w-full flex justify-between py-4">
