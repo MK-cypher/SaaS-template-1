@@ -78,19 +78,19 @@ export const workSteps = [
 export const pricing = [
   {
     type: "BASIC",
-    price: {monthly: 19, annual: 14},
+    price: {monthly: 19, annual: 190},
     description: "Best for low usage",
     features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
   },
   {
     type: "PRO",
-    price: {monthly: 59, annual: 49},
+    price: {monthly: 59, annual: 590},
     description: "Most Popular",
     features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
   },
   {
     type: "TEAM",
-    price: {monthly: 99, annual: 79},
+    price: {monthly: 99, annual: 999},
     description: "Best for companies",
     features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
   },

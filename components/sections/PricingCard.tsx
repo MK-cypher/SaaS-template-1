@@ -21,26 +21,26 @@ export default function PricingCard({item, type, i}: props) {
     let counter = price;
     if (type == "annual") {
       interval = setInterval(() => {
-        counter--;
-        if (counter <= item.price.annual) {
+        counter++;
+        if (counter >= item.price.annual) {
           setPrice(item.price.annual);
           clearInterval(interval);
           return;
         }
         setPrice(counter);
-      }, 50 / (i + 1));
+      }, 10 / (i + 1));
     }
 
     if (type == "monthly") {
       interval = setInterval(() => {
-        counter++;
-        if (counter >= item.price.monthly) {
+        counter--;
+        if (counter <= item.price.monthly) {
           setPrice(item.price.monthly);
           clearInterval(interval);
           return;
         }
         setPrice(counter);
-      }, 50 / (i + 1));
+      }, 10 / (i + 1));
     }
 
     return () => {
@@ -53,7 +53,7 @@ export default function PricingCard({item, type, i}: props) {
         <div className="text-sm mb-2">{item.type}</div>
         <div className="flex items-end mb-2">
           <div className={`text-5xl font-bold ${i == 1 && "text-primary"}`}>${price}</div>
-          <div className="text-muted-foreground">/mo</div>
+          <div className="text-muted-foreground">{type == "annual" ? "/yr" : "/mo"}</div>
         </div>
         <div className="text-muted-foreground">{item.description}</div>
         <div className="mt-5 py-5 border-t w-full flex flex-col gap-2 justify-center items-center">
